@@ -137,3 +137,40 @@ body{
   font-size: .8rem;
   margin-bottom: .5rem;
 }
+@media (max-width:46.9rem){
+
+  .container-header h2{
+    font-size: 1rem;
+  }
+  .container-header h1{
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin-bottom: 0.3rem;
+  }
+  .container-header .motive{
+    font-size: .6rem;
+    font-weight: 700;
+  }
+  .container-body {
+    /* Reset the grid to single column */
+    display: grid;
+    grid-template-columns: 1fr !important; /* Single column */
+    grid-template-rows: repeat(4, auto); /* Each card gets its own row */
+    width: 90%; /* Slightly narrower for mobile */
+    gap: 1.5rem;
+  }
+  /* Reset all card positioning */
+  .supervisor,
+  .calculator,
+  .builder,
+  .karma {
+    grid-column: 1 !important; /* Force all to first column */
+    grid-row: auto !important; /* Let rows flow naturally */
+    min-height: auto; /* Remove fixed height */
+    height: auto; /* Allow natural height */
+  }
+  .supervisor { grid-row: 1; }
+  .builder { grid-row: 2; }
+  .karma { grid-row: 3; }
+  .calculator { grid-row: 4; }
+}
